@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} 북마크등록 {% endblock %}
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="add" class="btn btn-info btn-sm">
+    </form>
+    <br> <a href="{% url 'list' %}">취소</a>
+
+{% endblock %}

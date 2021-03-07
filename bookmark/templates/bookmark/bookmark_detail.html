@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} 북마크상세 {% endblock %}
+{% block content %}
+
+ 사이트명 : {{object.site_name}}<br>
+ 주소: <a href=" {{object.url}}" target="_blank"> {{object.url}}</a>
+<br>
+<br>
+<a href="{% url 'list' %}">목록</a> |  <a href="{% url 'update' pk=bookmark.id %}">수정</a> |  <a href="#"">삭제</a>
+
+{% endblock %}
